@@ -3,14 +3,12 @@
 # Configuration ###############################################################
 
 DOTFILES=(
-    ".ncmpcpp"    "${HOME}/.ncmpcpp"
     ".tmux.conf"  "${HOME}/.tmux.conf"
     ".vim"        "${HOME}/.vim"
     ".vimrc"      "${HOME}/.vimrc"
     ".weechat"    "${HOME}/.weechat"
     ".Xresources" "${HOME}/.Xdefaults"
     ".Xresources" "${HOME}/.Xresources"
-    ".xinitrc"    "${HOME}/.xinitrc"
     ".xmonad"     "${HOME}/.xmonad"
     ".zsh"        "${HOME}/.zsh"
     ".zshrc"      "${HOME}/.zshrc"
@@ -32,7 +30,7 @@ install_dotfiles() {
     while (( $# )); do
         if [ ! -e "${2}" ]; then
             echo -e "${COLOR_CREATE}Creating link:${COLOR_RESET} ${2}"
-            # ln -s "${script_dir}/${1}" "${2}"
+            ln -s "${script_dir}/${1}" "${2}"
         else
             echo -e "${COLOR_SKIP}Skipping link:${COLOR_RESET} ${2} (file exists)"
         fi
@@ -46,7 +44,7 @@ clean_dotfiles() {
         # only remove symbolic links
         if [ -L "${2}" ]; then
             echo -e "${COLOR_DELETE}Removing link:${COLOR_RESET} ${2}"
-            # rm -f "${2}"
+            rm -f "${2}"
         fi
 
         shift 2
