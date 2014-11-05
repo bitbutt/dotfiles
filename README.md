@@ -5,10 +5,10 @@ This repository contains all of my dotfiles. A conglomeration of configuration!
 ## Installation
 
 1. Copy/clone this repository to your desired install location (e.g. `~/dotfiles`).
-2. (Optional) Modify the `DOTFILES` array in `bootstrap.sh` to configure where the symbolic links
-   to the dotfiles will be created.
-3. (Optional) Run `./bootstrap.sh clean` to remove any pre-existing symbolic links with names
-   matching the dotfiles in this repository from your local environment. Regular files will not
+2. Copy the example configuration file `.dotfiles.conf` to your home directory and edit
+   the `DOTFILES` array to only inlude the dotfiles you want to install.
+3. Optional: Run `./bootstrap.sh clean` to remove any pre-existing symbolic links with names
+   matching the dotfiles in `.dotfiles.conf` from your local environment. Regular files will not
    be modified or deleted.
 4. Run `./bootstrap.sh install` to create symbolic links to the dotfiles. If a file/link already
    exists, the file/link will be skipped.

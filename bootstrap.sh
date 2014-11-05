@@ -1,18 +1,8 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Configuration ###############################################################
 
-DOTFILES=(
-    ".tmux.conf"  "${HOME}/.tmux.conf"
-    ".vim"        "${HOME}/.vim"
-    ".vimrc"      "${HOME}/.vimrc"
-    ".weechat"    "${HOME}/.weechat"
-    ".Xresources" "${HOME}/.Xdefaults"
-    ".Xresources" "${HOME}/.Xresources"
-    ".xmonad"     "${HOME}/.xmonad"
-    ".zsh"        "${HOME}/.zsh"
-    ".zshrc"      "${HOME}/.zshrc"
-)
+CONF_FILE="${HOME}/.dotfiles.conf"
 
 COLOR_CREATE="\033[1;32m"
 COLOR_SKIP="\033[1;34m"
@@ -52,6 +42,13 @@ clean_dotfiles() {
 }
 
 # Main Execution ##############################################################
+
+if [ -e "${CONF_FILE}" ]; then
+    . "${CONF_FILE}"
+else
+    echo "${script_name}: error: cannot find configuration file"
+    exit 1
+fi
 
 case "${1}" in
     install )
