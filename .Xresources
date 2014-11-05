@@ -1,0 +1,60 @@
+!##############################################################################
+! ~/.Xresources : X.org configuration file                                    #
+!##############################################################################
+
+!URxvt ########################################################################
+URxvt*borderLess:        false
+URxvt*inheritPixmap:     false
+URxvt.inputMethod:       ibus
+URxvt.preeditType:       None
+URxvt*saveLines:         5000
+URxvt*scrollBar:         false
+URxvt*skipBuiltinGlyphs: true
+URxvt*termName:          rxvt-unicode
+URxvt*urgentOnBell:      false
+URxvt*visualBell:        false
+!Font
+URxvt*font:              xft:EnvyCodeR:size=10,xft:VL PGothic:regular:size=10
+URxvt*boldFont:          xft:EnvyCodeR:Bold:size=10,xft:VL PGothic:bold:size=10
+!Disable Perl Extensions
+URxvt*perl-ext:
+URxvt*perl-ext-common:
+!Borders
+*internalBorder:         0
+*externalBorder:         0
+
+!Colors #######################################################################
+*foreground:     #DCDCCC
+*background:     #393939
+!Black
+*color0:         #777777
+*color8:         #999999
+!Red
+*color1:         #CC9393
+*color9:         #DCA3A3
+!Green
+*color2:         #7F9F7F
+*color10:        #9ECE9E
+!Yellow
+*color3:         #EFEF8F
+*color11:        #EFEFAF
+!Blue
+*color4:         #9FAFAF
+*color12:        #8CD0D3
+!Magenta
+*color5:         #8C8CBC
+*color13:        #BC8CBC
+!Cyan
+*color6:         #C0BED1
+*color14:        #FFCFAF
+!White
+*color7:         #E0E0E0
+*color15:        #E0E0E0
+!Cursor
+*cursorColor:    #8FAF9F
+*cursorBlink:    true
+!Misc
+*colorBD:        #8CD0D3
+*colorIT:        #8CD0D3
+*colorUL:        #8CD0D3
+*underlineColor: #8CD0D3

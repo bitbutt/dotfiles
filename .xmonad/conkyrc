@@ -1,0 +1,13 @@
+###############################################################################
+# ~/.xmonad/conkyrc: Minimal conky runtime configuration file for xmonad      #
+###############################################################################
+
+out_to_console yes
+short_units yes
+out_to_x no
+background no
+update_interval 1
+total_run_times 0
+use_spacer none
+
+TEXT
