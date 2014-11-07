@@ -11,7 +11,7 @@
 
 !.tmux.conf
 !.vim/
-!.vim/bundles.vim
+!.vim/plugins.vim
 !.vimrc
 !.weechat/
 !.weechat/buffers.conf
