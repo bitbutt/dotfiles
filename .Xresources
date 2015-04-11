@@ -8,11 +8,14 @@ URxvt*inheritPixmap:     false
 URxvt.inputMethod:       ibus
 URxvt.preeditType:       None
 URxvt*saveLines:         5000
-URxvt*scrollBar:         false
+URxvt*scrollBar:         true
+URxvt*scrollBar_right:   true
+URxvt*scrollstyle:       plain
 URxvt*skipBuiltinGlyphs: true
 URxvt*termName:          rxvt-unicode
 URxvt*urgentOnBell:      false
 URxvt*visualBell:        false
+*cursorBlink:            true
 !Font
 URxvt*font:              xft:EnvyCodeR:size=10,xft:VL PGothic:regular:size=10
 URxvt*boldFont:          xft:EnvyCodeR:Bold:size=10,xft:VL PGothic:bold:size=10
@@ -24,37 +27,94 @@ URxvt*perl-ext-common:
 *externalBorder:         0
 
 !Colors #######################################################################
-*foreground:     #DCDCCC
-*background:     #393939
-!Black
-*color0:         #777777
-*color8:         #999999
-!Red
-*color1:         #CC9393
-*color9:         #DCA3A3
-!Green
-*color2:         #7F9F7F
-*color10:        #9ECE9E
-!Yellow
-*color3:         #EFEF8F
-*color11:        #EFEFAF
-!Blue
-*color4:         #9FAFAF
-*color12:        #8CD0D3
-!Magenta
-*color5:         #8C8CBC
-*color13:        #BC8CBC
-!Cyan
-*color6:         #C0BED1
-*color14:        #FFCFAF
-!White
-*color7:         #E0E0E0
-*color15:        #E0E0E0
-!Cursor
-*cursorColor:    #8FAF9F
-*cursorBlink:    true
-!Misc
-*colorBD:        #8CD0D3
-*colorIT:        #8CD0D3
-*colorUL:        #8CD0D3
-*underlineColor: #8CD0D3
+!*foreground:     #DCDCCC
+!*background:     #393939
+!!Black
+!*color0:         #777777
+!*color8:         #999999
+!!Red
+!*color1:         #CC9393
+!*color9:         #DCA3A3
+!!Green
+!*color2:         #7F9F7F
+!*color10:        #9ECE9E
+!!Yellow
+!*color3:         #EFEF8F
+!*color11:        #EFEFAF
+!!Blue
+!*color4:         #9FAFAF
+!*color12:        #8CD0D3
+!!Magenta
+!*color5:         #8C8CBC
+!*color13:        #BC8CBC
+!!Cyan
+!*color6:         #C0BED1
+!*color14:        #FFCFAF
+!!White
+!*color7:         #E0E0E0
+!*color15:        #E0E0E0
+!!Cursor
+!*cursorColor:    #8FAF9F
+!!Misc
+!*colorBD:        #8CD0D3
+!*colorIT:        #8CD0D3
+!*colorUL:        #8CD0D3
+!*underlineColor: #8CD0D3
+
+!#define S_base03        #002b36
+!#define S_base02        #073642
+!#define S_base01        #586e75
+!#define S_base00        #657b83
+!#define S_base0         #839496
+!#define S_base1         #93a1a1
+!#define S_base2         #eee8d5
+!#define S_base3         #fdf6e3
+!#define S_yellow        #b58900
+!#define S_orange        #cb4b16
+!#define S_red           #dc322f
+!#define S_magenta       #d33682
+!#define S_violet        #6c71c4
+!#define S_blue          #268bd2
+!#define S_cyan          #2aa198
+!#define S_green         #859900
+
+*background:            #002b36
+*foreground:            #657b83
+*fading:                40
+*fadeColor:             #002b36
+*cursorColor:           #93a1a1
+*pointerColorBackground:#586e75
+*pointerColorForeground:#93a1a1
+
+!! black dark/light
+*color0:                #073642
+!*color8:                #073642
+*color8:                #002b36
+
+!! red dark/light
+*color1:                #dc322f
+*color9:                #cb4b16
+
+!! green dark/light
+*color2:                #859900
+*color10:               #586e75
+
+!! yellow dark/light
+*color3:                #b58900
+*color11:               #657b83
+
+!! blue dark/light
+*color4:                #268bd2
+*color12:               #839496
+
+!! magenta dark/light
+*color5:                #d33682
+*color13:               #6c71c4
+
+!! cyan dark/light
+*color6:                #2aa198
+*color14:               #93a1a1
+
+!! white dark/light
+*color7:                #eee8d5
+*color15:               #fdf6e3

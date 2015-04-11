@@ -11,7 +11,8 @@ source ~/.vim/plugins.vim
 " Appearance & Color {{{2
 
 syntax on
-colorscheme zenburn
+set background=dark
+colorscheme solarized
 
 if has("gui_running")
     set guioptions-=l " removes lefthand scrollbar

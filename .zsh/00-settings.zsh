@@ -8,3 +8,4 @@ setopt CORRECT            # spellcheck
 setopt HIST_IGNORE_DUPS   # no duplicate entries
 setopt HIST_REDUCE_BLANKS # save hist space
 setopt NO_BEEP            # disable beeps
+setopt PROMPT_SUBST       # allow substitutions in prompt
