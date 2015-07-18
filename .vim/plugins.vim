@@ -8,7 +8,7 @@ if filereadable(expand("~/.vim/bundle/Vundle.vim/autoload/vundle.vim"))
     set rtp+=~/.vim/bundle/Vundle.vim
     call vundle#begin()
 
-    Plugin 'gmarik/Vundle.vim'
+    Plugin 'VundleVim/Vundle.vim'
 
     Plugin 'altercation/vim-colors-solarized'
     Plugin 'jeetsukumaran/vim-buffergator'
