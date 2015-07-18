@@ -8,22 +8,16 @@ if filereadable(expand("~/.vim/bundle/Vundle.vim/autoload/vundle.vim"))
     set rtp+=~/.vim/bundle/Vundle.vim
     call vundle#begin()
 
-    Plugin 'altercation/vim-colors-solarized'
-    "Plugin 'ervandew/supertab'
     Plugin 'gmarik/Vundle.vim'
+
+    Plugin 'altercation/vim-colors-solarized'
     Plugin 'jeetsukumaran/vim-buffergator'
     Plugin 'Lokaltog/vim-easymotion'
-    "Plugin 'mattn/zencoding-vim'
+    Plugin 'mustache/vim-mustache-handlebars'
     Plugin 'scrooloose/nerdcommenter'
     Plugin 'scrooloose/nerdtree'
     Plugin 'scrooloose/syntastic'
-    "Plugin 'Shougo/neocomplete.vim'
-    "Plugin 'Shougo/neosnippet.vim'
     Plugin 'tpope/vim-fugitive'
-    "Plugin 'tpope/vim-speeddating'
-    "Plugin 'Valloric/YouCompleteMe'
-    "Plugin 'vimwiki'
-    Plugin 'Zenburn'
 
     call vundle#end()
     filetype plugin indent on
