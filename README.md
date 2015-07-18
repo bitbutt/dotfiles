@@ -4,7 +4,9 @@ This repository contains all of my dotfiles. A conglomeration of configuration!
 
 ## Installation
 
-1. Copy/clone this repository to your desired install location (e.g. `~/dotfiles`).
+1. Clone this repository to your desired install location (e.g. `~/.dotfiles`).
+2. Run `git submodule init && git submodule update` inside the cloned directory to
+   automatically clone the submodule dependencies.
 2. Copy the example configuration file `.dotfiles.conf` to your home directory and edit
    the `DOTFILES` array to only inlude the dotfiles you want to install.
 3. Optional: Run `./bootstrap.sh clean` to remove any pre-existing symbolic links with names
