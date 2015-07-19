@@ -93,6 +93,8 @@ nnoremap <silent> <Leader>\| <C-w>v
 
 " Toggle folds with <Space>
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
+" Toggle list chars
+nnoremap <silent> <Leader>l :set list!<CR>
 
 " Keep indented selection selected
 vnoremap < <gv
@@ -122,7 +124,7 @@ set statusline+=%{&fileformat}]
 set statusline+=%h%m%r%w\ 
 set statusline+=%f
 set statusline+=%=
-"set statusline+=[%{SyntaxItem()}]\ 
+set statusline+=[%{SyntaxItem()}]\ 
 set statusline+=[\%03.3b,0x\%04.2B]\ 
 set statusline+=[%(%04l,%04v%)]\ %<%P
 set laststatus=2
