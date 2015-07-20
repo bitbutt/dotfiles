@@ -19,3 +19,7 @@
 !.xinitrc
 !.Xresources
 !.zshrc
+
+!.config/
+!.config/htop/
+!.config/htop/htoprc
