@@ -9,6 +9,7 @@
 
 !.dotfiles.conf
 
+!.minttyrc
 !.tmux.conf
 !.vim/
 !.vim/plugins.vim
