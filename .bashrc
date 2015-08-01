@@ -1,30 +1,32 @@
 ###############################################################################
-# ~/.zshrc : zsh configuration file                                           #
+# ~/.bashrc : bash configuration file                                         #
 ###############################################################################
 
-# Settings ####################################################################
-autoload -U colors && colors
-autoload -U compinit && compinit
-autoload -U promptinit && promptinit
-autoload -U zsh-mime-setup && zsh-mime-setup
+[ -z "${PS1}" ] && return
 
-setopt APPEND_HISTORY     # append history, don't overwrite
-setopt CORRECT            # spellcheck
-setopt HIST_IGNORE_DUPS   # no duplicate entries
-setopt HIST_REDUCE_BLANKS # save hist space
-setopt NO_BEEP            # disable beeps
-setopt PROMPT_SUBST       # allow substitutions in prompt
+# Settings ####################################################################
+set -o braceexpand
+set -o vi
+
+shopt -s histappend
+shopt -s extglob
+shopt -s nullglob
+shopt -s hostcomplete
+shopt -s globstar
+shopt -s dotglob
 
 # Prompt ######################################################################
+color_reset="$(tput sgr0)"
+
 if [ "${UID}" = 0 ]; then
-    usercolor_primary="red"
-    usercolor_accent="yellow"
+    usercolor_primary="$(tput setaf 1)"
+    usercolor_accent="$(tput setaf 3)"
 else
-    usercolor_primary="blue"
-    usercolor_accent="magenta"
+    usercolor_primary="$(tput setaf 4)"
+    usercolor_accent="$(tput setaf 5)"
 fi
 
-PROMPT="%{$fg_no_bold[${usercolor_primary}]%}[%{$fg_no_bold[${usercolor_accent}]%}%m:%d%{$fg_no_bold[${usercolor_primary}]%}] >>> %{$reset_color%}"
+PS1='${usercolor_primary}[${usercolor_accent}\h:${PWD}${usercolor_primary}] >>> ${color_reset}'
 
 # Aliases #####################################################################
 alias cp="cp -rv"
@@ -47,13 +49,12 @@ else
     alias pingg="ping -n 3 google.com"
 fi
 
-# Bindkeys ####################################################################
-bindkey -v # VIM-like key bindings
-
 # Exports #####################################################################
-export HISTFILE="${HOME}/.zsh_history"
+export HISTFILE="${HOME}/.bash_history"
+export HISTCONTROL="ignoreboth"
 export HISTSIZE="10000"
-export SAVEHIST="${HISTSIZE}"
+export HISTFILESIZE="${HISTSIZE}"
+export PROMPT_COMMAND="history -a"
 
 USER_SCRIPT_PATH="${HOME}/projects/scripts"
 ANDROID_PATH="/opt/android-sdk/platform-tools:/opt/android-sdk/build-tools/22.0.1"
@@ -67,5 +68,5 @@ export TERM="screen-256color"
 # Functions ###################################################################
 cd()
 {
-    builtin cd $@; ls
+    builtin cd "$@" && ls
 }

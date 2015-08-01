@@ -9,6 +9,7 @@
 
 !.dotfiles.conf
 
+!.bashrc
 !.minttyrc
 !.tmux.conf
 !.vim/
