@@ -18,7 +18,7 @@ if has("gui_running")
     set guioptions-=m " removes menubar
     set guioptions-=r " removes righthand scrollbar
     set guioptions-=T " removes toolbar
-    set guifont=EnvyCodeR\ 10
+    set guifont=FiraMono\ 11
 else
     set t_Co=256
 endif
@@ -112,6 +112,7 @@ inoremap /*<Space> /*<Space><Space>*/<Esc>2hi
 " Plugins
 nnoremap <silent> <Leader>d :NERDTreeToggle<CR>
 nnoremap <silent> <Leader>b :BuffergatorToggle<CR>
+nnoremap <silent> <Leader>rb :RainbowToggle<CR>
 
 " =============================================================================
 " Statusline
