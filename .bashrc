@@ -19,14 +19,14 @@ shopt -s dotglob
 color_reset="$(tput sgr0)"
 
 if [ "${UID}" = 0 ]; then
-    usercolor_primary="$(tput setaf 1)"
-    usercolor_accent="$(tput setaf 3)"
+    usercolor_primary="${color_reset}$(tput setaf 5)"
+    usercolor_accent="${color_reset}$(tput setaf 5)$(tput bold)"
 else
-    usercolor_primary="$(tput setaf 4)"
-    usercolor_accent="$(tput setaf 5)"
+    usercolor_primary="${color_reset}$(tput setaf 6)"
+    usercolor_accent="${color_reset}$(tput setaf 6)$(tput bold)"
 fi
 
-PS1='${usercolor_primary}[${usercolor_accent}\h:${PWD}${usercolor_primary}] >>> ${color_reset}'
+PS1='${usercolor_primary}[\h:${usercolor_accent}${PWD}${usercolor_primary}] >>> ${color_reset}'
 
 # Aliases #####################################################################
 alias cp="cp -rv"
@@ -55,15 +55,20 @@ export HISTCONTROL="ignoreboth"
 export HISTSIZE="10000"
 export HISTFILESIZE="${HISTSIZE}"
 export PROMPT_COMMAND="history -a"
-
-USER_SCRIPT_PATH="${HOME}/projects/scripts"
-ANDROID_PATH="/opt/android-sdk/platform-tools:/opt/android-sdk/build-tools/22.0.1"
-GEM_PATH="$(ruby -rubygems -e 'puts Gem.user_dir')/bin"
-
 export EDITOR="vim"
 export PAGER="less"
-export PATH="${PATH}:${USER_SCRIPT_PATH}:${GEM_PATH}:${ANDROID_PATH}"
 export TERM="screen-256color"
+
+# Path ########################################################################
+USER_SCRIPT_PATH="${HOME}/projects/scripts"
+ANDROID_PLATFORM_PATH="/opt/android-sdk/platform-tools"
+ANDROID_BUILD_PATH="/opt/android-sdk/build-tools/22.0.1"
+
+for d in "${USER_SCRIPT_PATH}" "${ANDROID_PLATFORM_PATH}" "${ANDROID_BUILD_PATH}"; do
+    if [ -d "${d}" ]; then
+        export PATH="${PATH}:${d}"
+    fi
+done
 
 # Functions ###################################################################
 cd()

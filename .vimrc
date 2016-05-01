@@ -10,7 +10,7 @@ source ~/.vim/plugins.vim
 " Appearance & Color
 syntax on
 set background=dark
-colorscheme solarized
+colorscheme gruvbox
 
 if has("gui_running")
     set guioptions-=l " removes lefthand scrollbar
@@ -111,8 +111,6 @@ inoremap /*<Space> /*<Space><Space>*/<Esc>2hi
 
 " Plugins
 nnoremap <silent> <Leader>d :NERDTreeToggle<CR>
-nnoremap <silent> <Leader>b :BuffergatorToggle<CR>
-nnoremap <silent> <Leader>rb :RainbowToggle<CR>
 
 " =============================================================================
 " Statusline
