@@ -63,8 +63,9 @@ export TERM="screen-256color"
 USER_SCRIPT_PATH="${HOME}/projects/scripts"
 ANDROID_PLATFORM_PATH="/opt/android-sdk/platform-tools"
 ANDROID_BUILD_PATH="/opt/android-sdk/build-tools/22.0.1"
+CONDA_PATH="${HOME}/.miniconda/bin"
 
-for d in "${USER_SCRIPT_PATH}" "${ANDROID_PLATFORM_PATH}" "${ANDROID_BUILD_PATH}"; do
+for d in "${USER_SCRIPT_PATH}" "${ANDROID_PLATFORM_PATH}" "${ANDROID_BUILD_PATH}" "${CONDA_PATH}"; do
     if [ -d "${d}" ]; then
         export PATH="${PATH}:${d}"
     fi
