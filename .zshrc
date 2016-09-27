@@ -62,12 +62,16 @@ export PAGER="less"
 export TERM="screen-256color"
 
 # Path ########################################################################
-USER_SCRIPT_PATH="${HOME}/projects/scripts"
-ANDROID_PLATFORM_PATH="/opt/android-sdk/platform-tools"
-ANDROID_BUILD_PATH="/opt/android-sdk/build-tools/22.0.1"
-CONDA_PATH="${HOME}/.miniconda/bin"
+PATH_USER_SCRIPT="${HOME}/projects/scripts"
+PATH_ANDROID_BUILD="/opt/android-sdk/build-tools/24.0.2"
+PATH_ANDROID_PLATFORM="/opt/android-sdk/platform-tools"
+PATH_CONDA="${HOME}/.miniconda/bin"
 
-for d in "${USER_SCRIPT_PATH}" "${ANDROID_PLATFORM_PATH}" "${ANDROID_BUILD_PATH}" "${CONDA_PATH}"; do
+if which ruby >/dev/null && which gem >/dev/null; then
+    PATH_GEM="$(ruby -rubygems -e 'puts Gem.user_dir')/bin"
+fi
+
+for d in "${PATH_USER_SCRIPT}" "${PATH_GEM}" "${PATH_CONDA}" "${PATH_ANDROID_BUILD}" "${PATH_ANDROID_PLATFORM}"; do
     if [ -d "${d}" ]; then
         export PATH="${PATH}:${d}"
     fi
