@@ -1,68 +1,44 @@
-!##############################################################################
-! ~/.Xresources : X.org configuration file                                    #
-!##############################################################################
-
-!URxvt ########################################################################
-URxvt*borderLess:        false
-URxvt*inheritPixmap:     false
-URxvt*saveLines:         5000
-URxvt*scrollBar:         true
-URxvt*scrollBar_right:   true
-URxvt*scrollstyle:       plain
-URxvt*skipBuiltinGlyphs: true
-URxvt*termName:          screen-256color
-URxvt*urgentOnBell:      false
-URxvt*visualBell:        false
-*cursorBlink:            true
-!Font
-URxvt*font:              xft:EnvyCodeR:size=10,xft:VL PGothic:regular:size=10
-URxvt*boldFont:          xft:EnvyCodeR:Bold:size=10,xft:VL PGothic:bold:size=10
-!Disable Perl Extensions
-URxvt*perl-ext:
-URxvt*perl-ext-common:
-!Borders
-*internalBorder:         0
-*externalBorder:         0
-
-!Colors #######################################################################
-
-*background:            #002b36
-*foreground:            #657b83
-*fading:                40
-*fadeColor:             #002b36
-*cursorColor:           #93a1a1
-*pointerColorBackground:#586e75
-*pointerColorForeground:#93a1a1
-
-!! black dark/light
-*color0:                #073642
-!*color8:                #073642
-*color8:                #002b36
-
-!! red dark/light
-*color1:                #dc322f
-*color9:                #cb4b16
-
-!! green dark/light
-*color2:                #859900
-*color10:               #586e75
-
-!! yellow dark/light
-*color3:                #b58900
-*color11:               #657b83
-
-!! blue dark/light
-*color4:                #268bd2
-*color12:               #839496
-
-!! magenta dark/light
-*color5:                #d33682
-*color13:               #6c71c4
-
-!! cyan dark/light
-*color6:                #2aa198
-*color14:               #93a1a1
-
-!! white dark/light
-*color7:                #eee8d5
-*color15:               #fdf6e3
+URxvt*termName:	screen-256color
+URxvt*inheritPixmap:	false
+URxvt*scrollBar:	true
+URxvt*perl-ext:	
+URxvt*boldFont:	xft:EnvyCodeR:Bold:size=10,xft:VL PGothic:bold:size=10
+URxvt*urgentOnBell:	false
+URxvt*scrollBar_right:	true
+URxvt*borderLess:	false
+URxvt*scrollstyle:	plain
+URxvt*visualBell:	false
+URxvt*perl-ext-common:	
+URxvt*skipBuiltinGlyphs:	true
+URxvt*saveLines:	5000
+URxvt*font:	xft:EnvyCodeR:size=10,xft:VL PGothic:regular:size=10
+xrenoise.use_xcursors:	1
+xrenoise.display:	:1
+xrenoise.display_resource:	0x00,0x32,0xEC,0x96,0x35,0xF5,0xA5,0x86
+xrenoise.executable_path:	/usr/bin/renoise3
+*color7:	#eee8d5
+*color13:	#6c71c4
+*foreground:	#657b83
+*internalBorder:	0
+*color8:	#002b36
+*color14:	#93a1a1
+*color15:	#fdf6e3
+*color9:	#cb4b16
+*background:	#002b36
+*pointerColorBackground:	#586e75
+*cursorBlink:	true
+*pointerColorForeground:	#93a1a1
+*color0:	#073642
+*color2:	#859900
+*cursorColor:	#93a1a1
+*color1:	#dc322f
+*color3:	#b58900
+*color10:	#586e75
+*externalBorder:	0
+*color4:	#268bd2
+*fadeColor:	#002b36
+*color11:	#657b83
+*color5:	#d33682
+*fading:	40
+*color12:	#839496
+*color6:	#2aa198

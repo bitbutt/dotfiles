@@ -34,7 +34,7 @@ alias ls="ls --tabsize=0 --color=auto --human-readable --group-directories-first
 alias la="ls -A"
 alias lal="ls -Al"
 alias ll="ls -l"
-alias livestreamer="livestreamer -p 'mpv --cache 8192 --title LiveStreamer'"
+alias streamlink="streamlink -p 'mpv --cache 8192 --title StreamLink'"
 alias rm="rm -vir"
 alias sizes="du -a -BM --max-depth=1"
 alias ..="cd .."
@@ -68,7 +68,7 @@ PATH_ANDROID_PLATFORM="/opt/android-sdk/platform-tools"
 PATH_CONDA="${HOME}/.miniconda/bin"
 
 if which ruby >/dev/null && which gem >/dev/null; then
-    PATH_GEM="$(ruby -rubygems -e 'puts Gem.user_dir')/bin"
+    PATH_GEM="$(ruby -rrubygems -e 'puts Gem.user_dir')/bin"
 fi
 
 for d in "${PATH_USER_SCRIPT}" "${PATH_GEM}" "${PATH_CONDA}" "${PATH_ANDROID_BUILD}" "${PATH_ANDROID_PLATFORM}"; do
